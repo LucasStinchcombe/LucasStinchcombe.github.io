@@ -1,11 +1,85 @@
-#trippy{
+#trippy1{
   height: 100%;
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  background-image:url('img/trippy.bmp');
+  background-image: url('img/trippy.bmp');
+  background-repeat: repeat-xy;
+  opacity: 1.0;
+  z-index: -2;
+}
+#tint{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: red;
   background-repeat: repeat;
+  opacity: 0.3;
+  z-index: -1;
+}
+#crew{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#einstein{
+  background: transparent url('img/einstein.png') 0 0 no-repeat;
+	position: absolute;
+	top: 150px;
+	left: 150px;
+  height: 372px;
+  width: 200px;
+}
+#jesus{
+  background: transparent url('img/jesus.png') 0 0 no-repeat;
+	position: absolute;
+	top: 150px;
+	left: 350px;
+  height: 266px;
+  width: 200px;
+}
+#swaggin{
+  background: transparent url('img/swaggin.png') 0 0 no-repeat;
+	position: absolute;
+	bottom: 100px;
+	left: 600px;
+  height: 418px;
+  width: 400px;
+  z-index: 4;
+}
+#obama{
+  background: transparent url('img/obama.png') 0 0 no-repeat;
+	position: absolute;
+	top: 20px;
+	right: 400px;
+  height: 258px;
+  width: 343px;
+}
+#vangogh{
+  background: transparent url('img/vangogh.png') 0 0 no-repeat;
+	position: absolute;
+	bottom: 100px;
+	right: 200px;
+  height: 400px;
+  width: 286px;
+}
+img{
+}
+.flip{
+  -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+}
+body{
+
 }
 .jumbotron {
   background-image:url('img/McGill copy.jpg');
