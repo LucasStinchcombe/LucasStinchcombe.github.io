@@ -1,0 +1,29 @@
+<!Doctype HTML>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/jquery.spritely.js"></script>
+  </head>
+  <body>
+    <div id='trippy' class='container'>
+    </div>
+      <script>
+        var ballsohard = function() {
+          var audio = new Audio('test.mp3');
+          audio.play();
+        }
+        var triptastic = function(){
+          $('#trippy').pan({fps: 30, speed: 5, dir: 'left'});
+        }
+        var start = function() {
+          ballsohard();
+          triptastic();
+        }
+        $(document).ready(start());
+      </script>
+  </body>
+</html>
