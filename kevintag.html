@@ -5,14 +5,28 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- <script src='js/jquery.animate-colors-min.js'></script>
-    <script src="js/jquery.spritely.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src='tweetie/tweetie.min.js'></script>
   </head>
   <body>
-    <h1>
-      KevinTag
-    </h1>
+    <center>
+      <h1>
+        KevinTag
+      </h1>
+      <script>
+        var start = function() {
+          $('.tweet').twittie(function() {
+            $("h1").hide();
+          });
+
+        };
+
+        $(document).ready(start());
+      </script>
+
+
+
+
     <!-- <div class='crew'>
       <div id='einstein'></div>
       <div id='jesus'></div>
@@ -89,6 +103,6 @@
           crew();
         }
         $(document).ready(start()); -->
-      </script>
+    </center>
   </body>
 </html>
