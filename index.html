@@ -7,19 +7,38 @@
 </head>
  
 <body>
-    <h2>Enter</h2>
+    <h2>Popup Window Tool</h2>
     <input type="text" id="userInput">
     <button onclick="openAsPopup()">Open</button>
+    <button onclick="encodeUrl()">Encode</button>
 
-    <script>
-        function openAsPopup() {
-          let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,
-width=0,height=0,left=-1000,top=-1000`;
-          let userInput = document.getElementById("userInput").value
-
-          window.open(userInput, "popup", params) 
-        }
-    </script>
+    <div id="textContainer"></div>
 </body>
+
+<script>
+function normalizeUrl(url) {
+    // If the URL already starts with a protocol, return it as is
+    if (/^https?:\/\//i.test(url)) {
+        return url;
+    }
+    // Otherwise, prepend with "https://"
+    return 'https://' + url;
+}
+
+function openAsPopup() {
+    let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,width=0,height=0,left=-1000,top=-1000`;
+    let userInput = document.getElementById("userInput").value
+
+    window.open(normalizeUrl(userInput), "popup", params) 
+}
+
+function encodeUrl() {
+    let userInput = document.getElementById("userInput").value;
+    const encodedUrl = encodeURIComponent(userInput);
+
+    const container = document.getElementById("textContainer");
+    container.innerText = encodedUrl;
+}
+</script>
  
 </html>
