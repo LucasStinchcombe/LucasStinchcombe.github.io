@@ -1,1 +1,25 @@
-response
+<html lang="en-US">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Open as popup</title>
+</head>
+ 
+<body>
+    <h2>Enter</h2>
+    <input type="text" id="userInput">
+    <button onclick="openAsPopup()">Open</button>
+
+    <script>
+        function openAsPopup() {
+          let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,
+width=0,height=0,left=-1000,top=-1000`;
+          let userInput = document.getElementById("userInput").value
+
+          window.open(userInput, "popup", params) 
+        }
+    </script>
+</body>
+ 
+</html>
