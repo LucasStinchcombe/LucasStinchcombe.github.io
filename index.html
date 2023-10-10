@@ -9,13 +9,21 @@
 <body>
     <h2>Popup Window Tool</h2>
     <input type="text" id="userInput">
-    <button onclick="openAsPopup()">Open</button>
-    <button onclick="encodeUrl()">Encode</button>
+    <button id="openButton" onclick="openAsPopup()">Open</button>
+    <button id="encodeButton" onclick="encodeUrl()">Encode</button>
 
     <div id="textContainer"></div>
 </body>
 
 <script>
+document.getElementById("userInput").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("encodeButton").click();
+    }
+});
+
 function normalizeUrl(url) {
     // If the URL already starts with a protocol, return it as is
     if (/^https?:\/\//i.test(url)) {
