@@ -24,6 +24,17 @@ document.getElementById("userInput").addEventListener("keyup", function(event) {
     }
 });
 
+const encodedUrl = getParameterByName("url");
+if (encodedUrl) {
+  document.getElementById("userInput").value = decodeURIComponent(encodedUrl);
+  openAsPopup();
+}
+
+function getParameterByName(name) {
+    const params = new URLSearchParams(window.location.search);
+    return params.get(name);
+}
+
 function normalizeUrl(url) {
     // If the URL already starts with a protocol, return it as is
     if (/^https?:\/\//i.test(url)) {
