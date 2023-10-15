@@ -1,2 +1,3 @@
 - [Popup Window Opener](http://lucasstinchcombe.github.io/)
 - [Birthday](http://lucasstinchcombe.github.io/birthday.html)
+- [Random Number Generator](http://lucasstinchcombe.github.io/random.html)
